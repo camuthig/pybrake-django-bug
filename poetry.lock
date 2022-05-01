@@ -1,0 +1,122 @@
+[[package]]
+name = "accumulation-tree"
+version = "0.6.2"
+description = "Red/black tree with support for fast accumulation of values in a key range"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "asgiref"
+version = "3.5.1"
+description = "ASGI specs, helper code, and adapters"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+tests = ["pytest", "pytest-asyncio", "mypy (>=0.800)"]
+
+[[package]]
+name = "django"
+version = "4.0.4"
+description = "A high-level Python web framework that encourages rapid development and clean, pragmatic design."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+asgiref = ">=3.4.1,<4"
+sqlparse = ">=0.2.2"
+tzdata = {version = "*", markers = "sys_platform == \"win32\""}
+
+[package.extras]
+argon2 = ["argon2-cffi (>=19.1.0)"]
+bcrypt = ["bcrypt"]
+
+[[package]]
+name = "pybrake"
+version = "1.0.6"
+description = "Python exception notifier for Airbrake"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+tdigest = "*"
+
+[[package]]
+name = "pyudorandom"
+version = "1.0.0"
+description = "Generate pseudorandom numbers by using algebra"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "sqlparse"
+version = "0.4.2"
+description = "A non-validating SQL parser."
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[[package]]
+name = "tdigest"
+version = "0.5.2.2"
+description = "T-Digest data structure"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+accumulation-tree = "*"
+pyudorandom = "*"
+
+[package.extras]
+tests = ["pytest", "pytest-timeout", "pytest-cov", "numpy"]
+
+[[package]]
+name = "tzdata"
+version = "2022.1"
+description = "Provider of IANA time zone data"
+category = "main"
+optional = false
+python-versions = ">=2"
+
+[metadata]
+lock-version = "1.1"
+python-versions = "^3.10"
+content-hash = "ea90d85aa3220f51bf193f44007d578840475e7cbbd9c1caa50ce77860d2a23a"
+
+[metadata.files]
+accumulation-tree = [
+    {file = "accumulation_tree-0.6.2.tar.gz", hash = "sha256:0de0f083ba56a82126d0af5940ba968264b201ab109b43581c6e709968417141"},
+]
+asgiref = [
+    {file = "asgiref-3.5.1-py3-none-any.whl", hash = "sha256:45a429524fba18aba9d512498b19d220c4d628e75b40cf5c627524dbaebc5cc1"},
+    {file = "asgiref-3.5.1.tar.gz", hash = "sha256:fddeea3c53fa99d0cdb613c3941cc6e52d822491fc2753fba25768fb5bf4e865"},
+]
+django = [
+    {file = "Django-4.0.4-py3-none-any.whl", hash = "sha256:07c8638e7a7f548dc0acaaa7825d84b7bd42b10e8d22268b3d572946f1e9b687"},
+    {file = "Django-4.0.4.tar.gz", hash = "sha256:4e8177858524417563cc0430f29ea249946d831eacb0068a1455686587df40b5"},
+]
+pybrake = [
+    {file = "pybrake-1.0.6.tar.gz", hash = "sha256:5deb49fc6220aa1a40cd9225910abf8ae418aa50edf4772d711c700f39c447a9"},
+]
+pyudorandom = [
+    {file = "pyudorandom-1.0.0.tar.gz", hash = "sha256:f30a093a0170c15f9c7f87eb29f71f0f5fde995528b7c6dc4606d389e8c37755"},
+]
+sqlparse = [
+    {file = "sqlparse-0.4.2-py3-none-any.whl", hash = "sha256:48719e356bb8b42991bdbb1e8b83223757b93789c00910a616a071910ca4a64d"},
+    {file = "sqlparse-0.4.2.tar.gz", hash = "sha256:0c00730c74263a94e5a9919ade150dfc3b19c574389985446148402998287dae"},
+]
+tdigest = [
+    {file = "tdigest-0.5.2.2-py2.py3-none-any.whl", hash = "sha256:e32ff6ab62e4defdb93b816c831080d94dfa1efb68a9fa1e7976c237fa9375cb"},
+    {file = "tdigest-0.5.2.2-py3-none-any.whl", hash = "sha256:dd25f8d6e6be002192bba9e4b8c16491d36c10b389f50637818603d1f67c6fb2"},
+    {file = "tdigest-0.5.2.2.tar.gz", hash = "sha256:8deffc8bac024761786f43d9444e3b6c91008cd690323e051f068820a7364d0e"},
+]
+tzdata = [
+    {file = "tzdata-2022.1-py2.py3-none-any.whl", hash = "sha256:238e70234214138ed7b4e8a0fab0e5e13872edab3be586ab8198c407620e2ab9"},
+    {file = "tzdata-2022.1.tar.gz", hash = "sha256:8b536a8ec63dc0751342b3984193a3118f8fca2afe25752bb9b7fffd398552d3"},
+]
