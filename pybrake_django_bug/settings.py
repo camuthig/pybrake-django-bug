@@ -47,6 +47,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'pybrake.django.AirbrakeMiddleware',
 ]
 
 ROOT_URLCONF = 'pybrake_django_bug.urls'
@@ -121,3 +122,10 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AIRBRAKE = {
+    'project_id': 123,
+    'project_key': 'FIXME',
+    'query_stats': False,
+    'queue_stats': False,
+}

@@ -14,8 +14,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.db import connection
 from django.urls import path
+
+def test(request, *args, **kwargs):
+    from django.http import HttpResponse
+    return HttpResponse('test')
+
+def err(request, *args, **kwargs):
+    with connection.cursor() as cursor:
+        cursor.execute("invalid SQL")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('test/', test),
+    path('err/', err),
 ]
